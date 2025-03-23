@@ -1,0 +1,21 @@
+{
+  "name": "editorjs-inline-hotkey",
+  "version": "1.0.0",
+  "description": "editor.js inline tool that adds hotkeys to the text",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "author": "Kaan Aksu",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
+  "devDependencies": {
+    "parcel": "^2.14.1"
+  }
+}

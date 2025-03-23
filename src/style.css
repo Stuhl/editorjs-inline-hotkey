@@ -1,0 +1,9 @@
+.editorjs-inline-hotkey {
+  padding      : 4px;
+  color        : hsla(0, 0%, 20%, 1);
+  font-weight  : 600;
+  border-radius: 4px;
+  font-size    : 13px;
+  border       : 1px solid hsla(0, 0%, 80%, 1);
+  box-shadow   : 0px 1px 0px hsla(0, 0%, 80%, 1);
+}
