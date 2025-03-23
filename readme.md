@@ -3,7 +3,7 @@
 ![Stability Badge](https://img.shields.io/badge/stability-stable-green.svg)
 ![](https://badgen.net/badge/Editor.js/v2.0/blue)
 
-Adds a Inline Hotkey Marker for [Editor.js](https://editorjs.io).
+Adds a Inline Hotkey Marker for [Editor.js](https://editorjs.io). This plugin uses the [<kbd></kbd>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd) tag to stay in line with accessability rules and have semantic meaning to the marked text.
 
 ![](assets/demo.gif)
 
@@ -73,20 +73,12 @@ npm run install
 npm run watch
 ```
 
-**Production release**
-
-1. Create a production bundle
-
-```shell
-$ npm run build
-```
-
-2. Commit `dist/bundle.js`
+Open a pull request if you spot any bugs!
 
 ## License
 
-This library is licensed under an MIT license.
+This plugin is licensed under an MIT license.
 
 ## Acknowledgements
 
-Made with 💛 by [Kaan "Stuhl" Aksu](https://github.com/Stuhl)
+Made with 💛 by [Kaan Aksu](https://github.com/Stuhl)
