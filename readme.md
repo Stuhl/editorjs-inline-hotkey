@@ -3,7 +3,7 @@
 ![Stability Badge](https://img.shields.io/badge/stability-stable-green.svg)
 ![](https://badgen.net/badge/Editor.js/v2.0/blue)
 
-Adds a Inline Hotkey Marker for [Editor.js](https://editorjs.io). This plugin uses the [<kbd></kbd>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd) tag to stay in line with accessability rules and have semantic meaning to the marked text.
+Adds a Inline Hotkey Marker for [Editor.js](https://editorjs.io). This plugin uses the [<kbd />](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd) tag to stay in line with accessability rules and have semantic meaning to the marked text.
 
 ![](assets/demo.gif)
 
