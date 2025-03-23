@@ -1,6 +1,3 @@
-import "./module.css";
-
-
 class $149c1bd638913645$var$EditorJSInlineHotkey {
     static get isInline() {
         return true;
@@ -19,11 +16,19 @@ class $149c1bd638913645$var$EditorJSInlineHotkey {
     static{
         this.title = "Hotkey";
     }
+    addInlineCSS(kbd) {
+        kbd.style.padding = "4px";
+        kbd.style.color = "hsla(0, 0%, 20%, 1)";
+        kbd.style.fontWeight = "600";
+        kbd.style.borderRadius = "4px";
+        kbd.style.fontSize = "12px";
+        kbd.style.border = "1px solid hsla(0, 0%, 80%, 1)";
+        kbd.style.boxShadow = "0px 1px 0px hsla(0, 0%, 80%, 1)";
+    }
     constructor({ api: api }){
         this.api = api;
         this.button = null;
         this.state = false;
-        this.keyboardTag = document.createElement("KBD");
     }
     getToolIcon() {
         return `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -52,6 +57,7 @@ class $149c1bd638913645$var$EditorJSInlineHotkey {
         const selectedText = range.extractContents();
         const kbd = document.createElement("KBD");
         kbd.classList.add($149c1bd638913645$var$EditorJSInlineHotkey.CSS);
+        this.addInlineCSS(kbd);
         kbd.appendChild(selectedText);
         range.insertNode(kbd);
         this.api.selection.expandToTag(kbd);

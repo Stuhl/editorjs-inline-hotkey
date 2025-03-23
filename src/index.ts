@@ -1,10 +1,7 @@
-import "./style.css"
-
 class EditorJSInlineHotkey {
   api        : any
   button     : HTMLButtonElement | null
   state      : boolean
-  keyboardTag: HTMLElement
 
   static get isInline() {
     return true
@@ -25,12 +22,21 @@ class EditorJSInlineHotkey {
   }
 
   static title: string = "Hotkey"
+  
+  addInlineCSS(kbd: HTMLElement) {
+    kbd.style.padding      = "4px"
+    kbd.style.color        = "hsla(0, 0%, 20%, 1)"
+    kbd.style.fontWeight   = "600"
+    kbd.style.borderRadius = "4px"
+    kbd.style.fontSize     = "12px"
+    kbd.style.border       = "1px solid hsla(0, 0%, 80%, 1)"
+    kbd.style.boxShadow    = "0px 1px 0px hsla(0, 0%, 80%, 1)"
+  }
 
   constructor({ api }) {
-    this.api         = api
-    this.button      = null
-    this.state       = false
-    this.keyboardTag = document.createElement("KBD")
+    this.api    = api
+    this.button = null
+    this.state  = false
   }
 
   getToolIcon(): string {
@@ -69,6 +75,7 @@ class EditorJSInlineHotkey {
     const kbd          = document.createElement("KBD")
 
     kbd.classList.add(EditorJSInlineHotkey.CSS)
+    this.addInlineCSS(kbd)
 
     kbd.appendChild(selectedText)
     range.insertNode(kbd)
