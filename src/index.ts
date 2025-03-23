@@ -1,6 +1,6 @@
 import "./style.css"
 
-class KeyboardShortcutInlineTool {
+class EditorJSInlineHotkey {
   api        : any
   button     : HTMLButtonElement | null
   state      : boolean
@@ -68,7 +68,7 @@ class KeyboardShortcutInlineTool {
     const selectedText = range.extractContents()
     const kbd          = document.createElement("KBD")
 
-    kbd.classList.add(KeyboardShortcutInlineTool.CSS)
+    kbd.classList.add(EditorJSInlineHotkey.CSS)
 
     kbd.appendChild(selectedText)
     range.insertNode(kbd)
@@ -78,7 +78,7 @@ class KeyboardShortcutInlineTool {
 
   unwrap(range: Range) {
     const selectedText = range.extractContents()
-    const keyboardTag  = this.api.selection.findParentTag("KBD", KeyboardShortcutInlineTool.CSS)
+    const keyboardTag  = this.api.selection.findParentTag("KBD", EditorJSInlineHotkey.CSS)
 
     if (keyboardTag) {
       keyboardTag.remove()
@@ -87,7 +87,7 @@ class KeyboardShortcutInlineTool {
   }
 
   checkState(selection: Selection) {
-    const tag = this.api.selection.findParentTag("KBD", KeyboardShortcutInlineTool.CSS)
+    const tag = this.api.selection.findParentTag("KBD", EditorJSInlineHotkey.CSS)
 
     this.state = !!tag
 
@@ -99,4 +99,4 @@ class KeyboardShortcutInlineTool {
   }
 }
 
-export default KeyboardShortcutInlineTool
+export default EditorJSInlineHotkey
