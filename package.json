@@ -16,6 +16,10 @@
       "optimize": true
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stuhl/editorjs-inline-hotkey"
+  },
   "devDependencies": {
     "parcel": "^2.14.1"
   }
